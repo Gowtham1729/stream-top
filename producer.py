@@ -1,22 +1,18 @@
-import socket
 import time
 
 import psutil
 from confluent_kafka import Producer
 
-KAFKA_CONF = {
-    'bootstrap.servers': "localhost:9092",
-    'client.id': socket.gethostname()
-}
-TOPIC_NAME = "top-events"
+from common.config import PRODUCER_KAFKA_CONF as KAFKA_CONF
+from common.config import SLEEP_INTERVAL, TOPIC_NAME
+from common.logger import configure_logger
 
-producer = Producer(KAFKA_CONF)
+logger = configure_logger(__name__)
 
 
 def produce_top_events(kafka_producer):
     cpu_percent = str(psutil.cpu_percent(percpu=True))
-    print(f"CPU Percent: {cpu_percent}")
-    # cpu_percent = cpu_percent.to_bytes(2, byteorder="big")
+    logger.info(f"CPU Percent: {cpu_percent}")
     kafka_producer.produce(TOPIC_NAME, key="cpu_percent", value=cpu_percent)
 
     # mem_percent = str(psutil.virtual_memory().percent)
@@ -25,6 +21,7 @@ def produce_top_events(kafka_producer):
 
 
 if __name__ == "__main__":
+    producer = Producer(KAFKA_CONF)
     while True:
-        time.sleep(1.5)
+        time.sleep(SLEEP_INTERVAL)
         produce_top_events(producer)

@@ -1,12 +1,18 @@
 # Stream-Top
 
-Stream-Top is a learning project primarily focused on understanding and utilizing Apache Kafka through a real-world mini project. The idea for this project was inspired by educative.io's projects. It serves as a real-time system resource monitoring tool that uses Apache Kafka for data streaming, with the current capability to monitor CPU usage.
+Stream-Top is a learning project primarily focused on understanding and utilizing Apache Kafka through a real-world mini
+project. The idea for this project was inspired by educative.io's projects. It serves as a real-time system resource
+monitoring tool that uses Apache Kafka for data streaming, with the current capability to monitor CPU usage.
 
 ## Project Purpose and Scope
 
-This project is intended for learning purposes, specifically for gaining a practical understanding of Apache Kafka. While the current iteration of the project supports CPU usage monitoring, there is potential to expand into other system resources in the future as part of the learning process.
+This project is intended for learning purposes, specifically for gaining a practical understanding of Apache Kafka.
+While the current iteration of the project supports CPU usage monitoring, there is potential to expand into other system
+resources in the future as part of the learning process.
 
-By trying this project, you can gain hands-on experience with few of the important technologies and concepts such as Apache Kafka, Docker, Python, Plotly Dash, and Jupyter Notebooks. This project offers a tangible use-case to apply these technologies, making the learning process more engaging and effective.
+By trying this project, you can gain hands-on experience with few of the important technologies and concepts such as
+Apache Kafka, Docker, Python, Plotly Dash, and Jupyter Notebooks. This project offers a tangible use-case to apply these
+technologies, making the learning process more engaging and effective.
 
 ## Getting Started
 
@@ -51,11 +57,14 @@ python producer.py
 
 ## Usage
 
-Stream-Top can be used to monitor the CPU usage of each core in real-time. The producer can be run on any machine to send CPU usage data to the Kafka topic, and the consumer notebook can be run anywhere with access to the Kafka topic to visualize the data.
+Stream-Top can be used to monitor the CPU usage of each core in real-time. The producer can be run on any machine to
+send CPU usage data to the Kafka topic, and the consumer notebook can be run anywhere with access to the Kafka topic to
+visualize the data.
 
 ## Future Scope
 
-As part of the learning journey, future enhancements may include expanding the monitoring capabilities to other system resources such as memory usage, disk I/O, network traffic, etc.
+As part of the learning journey, future enhancements may include expanding the monitoring capabilities to other system
+resources such as memory usage, disk I/O, network traffic, etc.
 
 ## Acknowledgments
 
